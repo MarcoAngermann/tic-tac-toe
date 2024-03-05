@@ -21,8 +21,8 @@ table {
     border-spacing: 0;
 }
 td {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     font-size: 24px;
     border: 0;
@@ -33,4 +33,31 @@ td:not(:last-child) {
 }
 tr:not(:last-child) td {
     border-bottom: 5px solid white;
+}
+
+.circle {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: stroke 7s ease-out forwards;
+  }
+  
+  @keyframes stroke {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+      to {
+          opacity: 1;
+      }
+  }
+
+  @keyframes crossAnimation {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.cross {
+    animation: crossAnimation 2s ease forwards;
 }
